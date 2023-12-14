@@ -9,12 +9,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         val splashscreen = installSplashScreen()
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_menu)
 
         splashscreen.setKeepOnScreenCondition { true }
         val intent = Intent(this, MenuActivity::class.java)
         startActivity(intent)
-        finish()
 
     }
 }

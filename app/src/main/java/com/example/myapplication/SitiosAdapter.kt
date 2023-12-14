@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +10,8 @@ class SitiosAdapter(private val sitios: List<Sitio>): RecyclerView.Adapter<Sitio
 
     class ViewHolder(val binding: ViewSitioItemBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(sitio: Sitio){
+            val res = Uri.parse("android.resource://com.example.myapplication/drawable/" + sitio.foto)
+            binding.foto.setImageURI(res)
             binding.nombre.text = sitio.nombre
             binding.descripcion.text = sitio.desc
         }
