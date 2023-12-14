@@ -14,6 +14,6 @@ class MainActivity : AppCompatActivity() {
         splashscreen.setKeepOnScreenCondition { true }
         val intent = Intent(this, MenuActivity::class.java)
         startActivity(intent)
-
+        finish()
     }
 }
